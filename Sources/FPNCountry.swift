@@ -11,8 +11,8 @@ public struct FPNCountry: Equatable {
 		self.name = name
 		self.phoneCode = phoneCode
 		self.code = FPNCountryCode(rawValue: code)!
-
-		if let flag = UIImage(named: code, in: Bundle.FlagIcons, compatibleWith: nil) {
+        let bundle = "Resources/FlagKit.bundle/"
+		if let flag = UIImage(named: bundle + code, in: Bundle.FlagIcons, compatibleWith: nil) {
 			self.flag = flag
 		} else {
 			self.flag = UIImage(named: "unknown", in: Bundle.FlagIcons, compatibleWith: nil)
