@@ -15,7 +15,7 @@ public struct FPNCountry: Equatable {
 		if let flag = UIImage(named: bundle + code, in: Bundle.FlagIcons, compatibleWith: nil) {
 			self.flag = flag
 		} else {
-			self.flag = UIImage(named: "unknown", in: Bundle.FlagIcons, compatibleWith: nil)
+			self.flag = UIImage(named: bundle + "unknown", in: Bundle.FlagIcons, compatibleWith: nil)
 		}
 	}
 
