@@ -56,6 +56,7 @@ class FPNSearchCountryViewController: UITableViewController, UISearchResultsUpda
 		searchController = UISearchController(searchResultsController: nil)
 		searchController?.searchResultsUpdater = self
 		searchController?.delegate = self
+        searchController?.searchBar.barStyle = .black
 
 		if #available(iOS 9.1, *) {
 			searchController?.obscuresBackgroundDuringPresentation = false
